@@ -1,0 +1,30 @@
+.expense {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.expense input {
+    width: 50%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: .90rem;
+}
+
+.expense a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    padding: 3px 5px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.expense a img {
+    width: 1rem;
+    margin-right: 5px;
+}
