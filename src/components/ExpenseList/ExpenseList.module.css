@@ -1,0 +1,44 @@
+.expense-list {
+    width: 100%;
+    list-style: none;
+}
+
+.expense-list li {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.expense-list__item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.expense-list__item p {
+    font-size: .80rem;
+}
+
+.expense-list__price {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 7px;
+}
+
+.expense-list__price img {
+    width: .80rem;
+}
+
+.expense-list__price p {
+    font-size: 1.2rem;
+}

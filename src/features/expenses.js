@@ -8,8 +8,8 @@ const initialStateValue = [{
 },
 {
     id: 2,
-    title: '',
-    price: '',
+    title: 'Gym Membership',
+    price: '3567',
     date: new Date('2022-04-04'),
 }];
 
