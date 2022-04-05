@@ -1,12 +1,12 @@
 import React from 'react';
-import Expense from './components/Expense/Expense';
+import ExpenseSearch from './components/ExpenseSearch/ExpenseSearch';
 
 
 function App() {
   return (
     <div className="App">
       <h1>Expense Tracker App</h1>
-      <Expense />
+      <ExpenseSearch />
     </div>
   );
 }

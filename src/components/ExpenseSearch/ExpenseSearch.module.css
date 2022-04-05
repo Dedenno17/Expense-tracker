@@ -5,13 +5,27 @@
     margin: 10px 0;
 }
 
-.expense input {
+.expense-input {
+    position: relative;
     width: 50%;
+}
+
+.expense-input input {
+    width: 100%;
+    height: 100%;
     border: none;
     outline: none;
     border-radius: 20px;
-    padding: 3px 10px;
+    padding: 3px 30px;
     font-size: .90rem;
+}
+
+.expense-input img {
+    width: .90rem;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
 }
 
 .expense a {
@@ -28,3 +42,5 @@
     width: 1rem;
     margin-right: 5px;
 }
+
+
