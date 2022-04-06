@@ -1,0 +1,27 @@
+.add-expense {
+    width: 100%;
+}
+
+.add-expense_links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 20px 0;
+}
+
+.add-expense_links a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 5px;
+    border: 1px solid #fff;
+    outline: none;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.add-expense a img {
+    width: 1rem;
+    margin-right: 5px;
+}

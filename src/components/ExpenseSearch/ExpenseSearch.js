@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+
 import styles from './ExpenseSearch.module.css';
 import plus from '../../Images/circle-plus-solid.svg';
 import search from '../../Images/search-solid.svg';
@@ -15,10 +17,10 @@ const ExpenseSearch = (props) => {
                     />
                     <img src={search} alt='search' />
                 </div>
-                <a href="/">
+                <Link to="/add">
                     <img src={ plus } alt="Add" />
                     Add
-                </a>
+                </Link>
             </div>
             <ExpenseList />
         </React.Fragment>
