@@ -5,12 +5,14 @@ const initialStateValue = [{
     title: 'Bought Milk',
     price: '233',
     date: new Date('2022-04-04'),
+    category: 'health'
 },
 {
     id: 2,
     title: 'Gym Membership',
     price: '3567',
     date: new Date('2022-04-04'),
+    category: 'hobby'
 }];
 
 export const expensesSlice = createSlice({
@@ -19,7 +21,7 @@ export const expensesSlice = createSlice({
     reducers: {
         setExpenses: (state, action) => {
             state.expenses = action.payload;
-        }
+        },
     }
 })
 

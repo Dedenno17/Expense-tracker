@@ -4,6 +4,7 @@
 }
 
 .expense-list li {
+    position: relative;
     width: 100%;
     padding: 10px;
     margin-top: 10px;
@@ -14,31 +15,58 @@
     border-radius: 5px;
 }
 
-.expense-list__item {
+
+.expense-list_image {
+    width: 10%;
     height: 100%;
+    border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expense-list_image img {
+    width: 3rem;
+}
+
+.expense-list__row {
+    width: 88%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
 }
 
-.expense-list__item p {
-    font-size: .80rem;
-}
-
-.expense-list__price {
+.expense-list__firstRow {
     height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    align-items: flex-end;
-    padding-top: 7px;
+    align-items: center;
 }
 
-.expense-list__price img {
+
+.expense-list__firstRow img {
     width: .80rem;
 }
 
-.expense-list__price p {
+.expense-list__secondRow {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.expense-list__secondRow p:first-child {
+    font-size: .80rem;
+}
+
+.expense-list__secondRow p:last-child {
     font-size: 1.2rem;
+}
+
+.expense-list li span {
+    position: absolute;
+    display: block;
+    width: 1%;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }
