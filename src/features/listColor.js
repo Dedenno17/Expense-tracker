@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialStateValue = '';
+const initialStateValue = 0;
 
 export const listColorSlice = createSlice({
     name: 'listColor',
@@ -12,10 +12,6 @@ export const listColorSlice = createSlice({
             }
             state.listColor = action.payload;
         },
-        setReturnColor: (state) => {
-            const colors = ['#264653', '#2a9d8f', '#e9c46a', '#f4a261', '#e76f51' ];
-            return colors[state.listColor];
-        }
     }
 })
 

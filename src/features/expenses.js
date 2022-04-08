@@ -1,17 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialStateValue = [{
-    id: 1,
+    id: 0.16693430082363347,
     title: 'Bought Milk',
-    price: '233',
-    date: new Date('2022-04-04'),
+    amount: '233',
+    date: new Date(2022, 4, 4),
     category: 'health'
 },
 {
-    id: 2,
+    id: 0.566094407168138,
     title: 'Gym Membership',
-    price: '3567',
-    date: new Date('2022-04-04'),
+    amount: '3567',
+    date: new Date(2022, 4, 4),
     category: 'hobby'
 }];
 

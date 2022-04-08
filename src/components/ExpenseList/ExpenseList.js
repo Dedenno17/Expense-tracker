@@ -11,7 +11,8 @@ import education from '../../Images/graduation-cap-solid.svg';
 const ExpenseList = (props) => {
 
     const expenses = useSelector((state) => state.expenses.expenses);
-    const spanColor = useSelector((state) => state.listColor.listColor);
+    const colors = ['#264653', '#2a9d8f', '#e9c46a', '#f4a261', '#e76f51' ];
+   
 
     const categoryImageHandler = (category) => {
         switch(category) {
@@ -40,10 +41,10 @@ const ExpenseList = (props) => {
                         </div>
                         <div className={`${styles['expense-list__secondRow']}`}>
                             <p>{ item.date.getFullYear() }</p>
-                            <p>${item.price}</p>
+                            <p>${item.amount}</p>
                         </div>
                     </div>
-                    <span style={{backgroundColor: spanColor}}></span>
+                    <span style={{backgroundColor: colors[Math.floor(item.id * 5)]}}></span>
                 </li>
             ))}
         </ul>
