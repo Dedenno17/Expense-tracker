@@ -1,10 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
+
+// reducers
 import expensesReducer from '../features/expenses';
-import listColorReducer from '../features/listColor';
 
 export const store = configureStore({
   reducer: {
     expenses: expensesReducer,
-    listColor: listColorReducer,
   },
+  middleware: (getDefaultMiddleware) =>
+  getDefaultMiddleware({
+    serializableCheck: false,
+  }),
 });
