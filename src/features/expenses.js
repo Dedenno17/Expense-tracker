@@ -1,19 +1,23 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialStateValue = [{
+const initialStateValue = [
+    {
     id: Math.random(),
     title: 'Bought Milk',
     amount: '233',
-    date: new Date(2022, 4, 4),
-    category: 'health'
+    date: new Date('2022/04/04'),
+    category: 'health',
+    num: 2
 },
 {
-    id: Math.random() + 0.2,
+    id: Math.random() + 0.1,
     title: 'Gym Membership',
     amount: '3567',
-    date: new Date(2022, 4, 4),
-    category: 'hobby'
-}];
+    date: new Date('2022/03/05'),
+    category: 'hobby',
+    num: 3
+}
+];
 
 export const expensesSlice = createSlice({
     name: 'expenses',

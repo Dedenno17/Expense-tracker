@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { setExpenses } from "../../features/expenses";
 
 import styles from './AddExpenseForm.module.css';
@@ -11,10 +12,12 @@ const AddExpenseForm = (props) => {
     const [title, setTitle] = useState('');
     const [amount, setAmount] = useState('');
     const [date, setDate] = useState('');
-    const [category, setCategory] = useState('');
+    const [category, setCategory] = useState('health');
 
     const expenses = useSelector((state) => state.expenses.expenses);
     const dispatch = useDispatch();
+
+    const navigate = useNavigate();
 
     const titleChangeHandler = (e) => {
         setTitle(e.target.value);
@@ -46,8 +49,11 @@ const AddExpenseForm = (props) => {
         }
 
         const id = Math.random();
-        const newList = { id, title, amount, date: new Date(date), category};
+        const newList = { id, title, amount, date: new Date(), category};
         dispatch(setExpenses([...expenses, newList]));
+
+        navigate('/');
+
     }
 
     return (

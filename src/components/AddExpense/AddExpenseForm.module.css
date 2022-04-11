@@ -38,7 +38,6 @@ form button:hover {
 }
 
 
-.input.invalid input{
-    border: 1px solid red;
-    background-color: rgb(245, 201, 201);
+.input.invalid p:first-child{
+    font-size: 0.8rem;
 }

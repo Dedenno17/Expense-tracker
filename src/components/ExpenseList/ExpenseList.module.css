@@ -45,6 +45,7 @@
 
 .expense-list__firstRow img {
     width: .80rem;
+    cursor: pointer;
 }
 
 .expense-list__secondRow {
@@ -54,8 +55,10 @@
     align-items: center;
 }
 
-.expense-list__secondRow p:first-child {
-    font-size: .80rem;
+.expense-list__secondRow input {
+    border: none;
+    background: transparent;
+    outline: none;
 }
 
 .expense-list__secondRow p:last-child {
