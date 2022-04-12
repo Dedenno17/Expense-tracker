@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 
 import styles from './ExpenseList.module.css';
 import trash from '../../Images/trash-solid.svg';
@@ -10,7 +10,6 @@ import { setExpenses } from "../../features/expenses";
 
 const ExpenseList = (props) => {
 
-    const expenses = useSelector((state) => state.expenses.expenses);
     const colors = ['#264653', '#2a9d8f', '#e9c46a', '#f4a261', '#e76f51' ];
 
     const dispatch = useDispatch();
@@ -30,14 +29,14 @@ const ExpenseList = (props) => {
     }
 
     const deleteListHandler = (id) => {
-        const newList = expenses.filter(item => item.id !== id);
+        const newList = props.filteredExpenses.filter(item => item.id !== id);
         dispatch(setExpenses(newList));
     }
     
 
     return (
         <ul className={`${styles['expense-list']}`}>
-            {expenses.map(item => (
+            {props.filteredExpenses.map(item => (
                 <li key={item.id}>
                     <div className={`${styles['expense-list_image']}`}>
                         <img src={categoryImageHandler(item.category)} alt={item.category} />
