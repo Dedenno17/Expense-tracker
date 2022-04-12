@@ -21,7 +21,6 @@ const ExpenseSearch = (props) => {
                 }else{
                     const newList = expenses.filter(item => item.title.includes(searchList));
                     setFilteredExpenses(newList);
-                    console.log(searchList);
                 }
             }, 1000)
 

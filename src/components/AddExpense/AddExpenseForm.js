@@ -41,24 +41,25 @@ const AddExpenseForm = (props) => {
         if( 
             title.trim().length === 0 &&
             amount.trim().length === 0 &&
-            date === '' &&
-            category.trim().length === 0
+            date === ''
         ) {
             setIsValid(false);
             return;
+        } else {
+
+            const id = Math.random();
+            const newList = { id, title, amount, date: new Date(), category};
+            dispatch(setExpenses([...expenses, newList]));
+    
+            navigate('/');
         }
 
-        const id = Math.random();
-        const newList = { id, title, amount, date: new Date(), category};
-        dispatch(setExpenses([...expenses, newList]));
-
-        navigate('/');
 
     }
 
     return (
-        <form className={`${styles.ExpenseForm}`} onSubmit={submitHandler}>
-            <div className={ `${styles.input} ${!isValid && styles.invalid}`}>
+        <form className={`${styles.ExpenseForm} ${!isValid && styles.invalid}`} onSubmit={submitHandler}>
+            <div className={ `${styles.input}`}>
                 <label htmlFor="title">Title</label>
                 <input
                     type='text'

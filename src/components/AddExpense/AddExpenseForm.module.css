@@ -38,6 +38,13 @@ form button:hover {
 }
 
 
-.input.invalid p:first-child{
-    font-size: 0.8rem;
+form.invalid input, form.invalid select{
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    outline: none;
+    border: 1px solid red;
+    border-radius: 5px;
+    margin-top: 5px;
 }
